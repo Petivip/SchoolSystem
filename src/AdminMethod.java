@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class AdminMethod {
@@ -147,6 +148,7 @@ public class AdminMethod {
     }
 
     public void EnrollStudent(ArrayList<Class> list,ArrayList<Student> list1){
+        Date date=new Date();
         System.out.println("Enter name of the class:");
         String nameClass=key.next();
         System.out.println("Enter name of the student:");
@@ -156,6 +158,7 @@ public class AdminMethod {
                 for(Student j:list1){
                     if (j.getName().equalsIgnoreCase(nameStudent)) {
                         l.setStudentId(j.getId());
+                        l.setEnrollDate(date.toString());
                     }
                 }
             }
@@ -201,6 +204,16 @@ public class AdminMethod {
             System.out.println("Student Id: " +i.getId());
             System.out.println("Class Name : " +i.getName());
             System.out.println("Class Description : " +i.getDescription());
+            for(Student t:list){
+                if(t.getId()==i.getStudentId()){
+                    System.out.println("Student Enrolled to this class : " + t.getName()+" ("+i.getEnrollDate()+" )");
+                }
+            }
+            for(Faculity s:list1){
+                if(s.getId()==i.getFacultyId()){
+                    System.out.println("Faculty to this class : " + s.getName());
+                }
+            }
             System.out.println();
         }
     }

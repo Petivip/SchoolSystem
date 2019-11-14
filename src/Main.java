@@ -43,7 +43,15 @@ public class Main {
         Class bootstrap=new Class(103,"bootstrap","Introduction to bootstrap ");
         Collections.addAll(classArrayList,java,python,javascript,bootstrap);
 
+        //Enroll a student to a class and add faculty to a class
 
+        java.setStudentId(petros.getId());
+        java.setFacultyId(victor.getId());
+        java.setEnrollDate(date.toString());
+
+        python.setStudentId(tony.getId());
+        python.setFacultyId(beth.getId());
+        python.setEnrollDate("05/30/2019");
 
         Methods methods=new Methods();
         methods.Welcome(adminArrayList,faculityArrayList,studentArrayList,classArrayList);

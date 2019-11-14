@@ -4,6 +4,7 @@ public class Class {
     private String description;
     private long studentId;
     private long facultyId;
+    private String EnrollDate;
 
     public Class() {
     }
@@ -12,6 +13,19 @@ public class Class {
         this.id = id;
         this.name = name;
         this.description = description;
+    }
+
+    public Class(long id, String name, String description, String enrollDate) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        EnrollDate = enrollDate;
+    }
+
+    public Class(long studentId, long facultyId, String enrollDate) {
+        this.studentId = studentId;
+        this.facultyId = facultyId;
+        EnrollDate = enrollDate;
     }
 
     public Class(long studentId) {
@@ -58,6 +72,14 @@ public class Class {
 
     public void setFacultyId(long facultyId) {
         this.facultyId = facultyId;
+    }
+
+    public String getEnrollDate() {
+        return EnrollDate;
+    }
+
+    public void setEnrollDate(String enrollDate) {
+        EnrollDate = enrollDate;
     }
 }
 
