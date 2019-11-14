@@ -66,6 +66,7 @@ public class Methods {
             String pass = key.next();
             for (Admin l : list) {
                 if (l.getEmail().equalsIgnoreCase(email) && l.getPassword().equalsIgnoreCase(pass)) {
+                    System.out.println( );
                     System.out.println("You are logged in as " + l.getName());
                     adminMethod.AdminMethods(list1,list2,list3);
                     answer="no";

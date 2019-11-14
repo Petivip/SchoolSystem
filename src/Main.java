@@ -17,8 +17,8 @@ public class Main {
         Date date=new Date();
 
         //admin accounts
-       Admin admin=new Admin("admin",1,"admin@gmail.com","adminpass");
-        Admin admin2=new Admin("admin2",2,"admin2@gmail.com","admin2pass");
+       Admin admin=new Admin("admin",1,"admin@email.com","password");
+        Admin admin2=new Admin("admin2",2,"admin2@email.com","admin2pass");
         Collections.addAll(adminArrayList,admin,admin2);
 
        //student accounts
